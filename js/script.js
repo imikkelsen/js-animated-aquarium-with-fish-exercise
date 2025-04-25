@@ -58,5 +58,53 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
 
+      const fishInfo = [
+        {
+          className: "redfish",
+          art: "Rød Snapper",
+          alder: "2 år",
+          længde: "Op til 100 cm",
+          vægt: "Typisk 2–4 kg",
+        },
+        {
+          className: "bluefish",
+          art: "Blåfisk",
+          alder: "3 år",
+          længde: "Op til 120 cm",
+          vægt: "Op til 14 kg",
+        },
+        {
+          className: "tropicalfish",
+          art: "papegøjefisk",
+          alder: "1 år",
+          længde: "Op til 41 cm",
+          vægt: "Op til 40 kg",
+        },
+        {
+            className: "orangefish",
+            art: "Orange Koralrevsfisk",
+            alder: "1,5 år",
+            længde: "Op til 11 cm",
+            vægt: "Ca. 250 gram",
+          },
+          {
+            className: "flatbluefish",
+            art: "Blå Kirurgfisk",
+            alder: "3 år",
+            længde: "Op til 30 cm",
+            vægt: "Op til 600 gram",
+          },
+          {
+            className: "codfish",
+            art: "Torsk",
+            alder: "4 år",
+            længde: "Op til 150 cm",
+            vægt: "op til 12 kg",
+          }
+    ];
+
+
+
+
 
 });
