@@ -15,19 +15,36 @@
   background-size: cover;
 }
 
-/* Fælles styling for fisk */
 .bg img {
   position: absolute;
   max-width: 200px;
   z-index: 1;
 }
 
-.redfish {
+
+
+.redfish,
+.redfish2 {
   z-index: auto;
   bottom: 70px;
   left: -200px;
   max-width: 300px;
+}
+
+.redfish {
   animation: zigzag 17s linear infinite;
+}
+
+.redfish2 {
+  animation: zigzag 13s linear infinite;
+}
+
+.bluefish {
+  bottom: 170px;
+  left: 20px;
+  width: 94px;
+  height: 74px;
+  animation: zigzag 12s linear infinite;
 }
 
 .orangefish {
@@ -39,6 +56,13 @@
   animation: zigzag 12s linear infinite;
 }
 
+.tropicalfish {
+  z-index: auto;
+  bottom: 180px;
+  right: -200px;
+  animation: arcLeftMotion 12s linear infinite;
+}
+
 .flatbluefish {
   z-index: auto;
   bottom: 180px;
@@ -46,14 +70,47 @@
   animation: arcLeftMotion 21s linear infinite;
 }
 
-.codfish {
+.codfish,
+.codfish2,
+.codfish3,
+.codfish4,
+.codfish5 {
   z-index: auto;
   bottom: 23px;
   right: -200px;
-  animation: arcLeftMotion 16s linear infinite;
 }
 
-/* ANIMATIONER */
+.codfish  { animation: arcLeftMotion 16s linear infinite; }
+.codfish2 { animation: arcLeftMotion 18s linear infinite; }
+.codfish3 { animation: arcLeftMotion 10s linear infinite; }
+.codfish4 { animation: arcLeftMotion 14s linear infinite; }
+.codfish5 { animation: arcLeftMotion 12s linear infinite; }
+
+.piratefish {
+  position: absolute;
+  bottom: 180px;
+  left: 100px;
+  animation: loopSwim 8s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.colorfulfish {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 80px;
+  z-index: 1;
+  animation: floatDrift 4s ease-in-out infinite;
+}
+
+.yellowgreyfish {
+  bottom: 130px;
+  left: -200px;
+  width: 100px;
+  animation: zoomZag 15s linear infinite;
+}
+
+/* Animations */
 
 @keyframes zigzag {
   0%   { transform: translate(0, 0) scaleX(1); }
@@ -78,11 +135,34 @@
   100% { transform: scale(1) rotate(360deg); }
 }
 
+@keyframes loopSwim {
+  0%   { transform: translate(0, 0) rotate(0deg) scaleX(1); }
+  25%  { transform: translate(50px, -30px) rotate(15deg) scaleX(1); }
+  50%  { transform: translate(0, -60px) rotate(0deg) scaleX(1); }
+  75%  { transform: translate(-50px, -30px) rotate(-15deg) scaleX(1); }
+  100% { transform: translate(0, 0) rotate(0deg) scaleX(1); }
+}
+
+@keyframes floatDrift {
+  0%   { transform: translateX(0) scaleX(1); }
+  25%  { transform: translateX(10px) scaleX(1); }
+  50%  { transform: translateX(0px) scaleX(1); }
+  75%  { transform: translateX(-10px) scaleX(1); }
+  100% { transform: translateX(0) scaleX(1); }
+}
+
+@keyframes zoomZag {
+  0%   { transform: translateX(0) translateY(0) scaleX(1); }
+  20%  { transform: translateX(200px) translateY(-50px) scaleX(1); }
+  40%  { transform: translateX(400px) translateY(30px) scaleX(1); }
+  60%  { transform: translateX(600px) translateY(-30px) scaleX(1); }
+  80%  { transform: translateX(800px) translateY(20px) scaleX(1); }
+  100% { transform: translateX(1000px) translateY(0) scaleX(1); }
+}
+
 .spin-grow {
   animation: spinGrow 1s ease;
 }
-
-
 
 
 #anchor-tooltip {
@@ -109,4 +189,47 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 10;
+}
+
+
+
+.small-clam {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 120px;
+  z-index: 2;
+}
+
+.big-clam {
+  position: absolute;
+  bottom: 0;
+  left: 80%;
+  width: 120px;
+  z-index: 2;
+}
+
+.algae {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 120px;
+  z-index: 1;
+}
+
+.seaweed {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 120px;
+  z-index: 1;
+}
+
+.anchor {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  width: 120px;
+  z-index: 2;
+  cursor: pointer;
 }

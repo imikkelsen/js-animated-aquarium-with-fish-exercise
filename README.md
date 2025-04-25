@@ -1,4 +1,4 @@
-# 📚 Animating HTML-elements in a Aquarium with CSS animation and JavaScript Events
+ute# 📚 Animating HTML-elements in a Aquarium with CSS animation and JavaScript Events
 
 ---
 
@@ -373,82 +373,7 @@ In your `script.js` file, start by wrapping your logic in this structure:
 document.addEventListener("DOMContentLoaded", function () {
   // All JavaScript goes inside here
 });
-```
-
-Then, inside this block above, select the relevant DOM elements:
-
-```javascript
-const anchor = document.querySelector(".anchor");
-const anchorTooltip = document.getElementById("anchor-tooltip");
-const audio = document.querySelector("audio");
-```
-
-✅ Commit your changes:
-
-#### 🎯 Step 3.4 – Show the tooltip on mouseenter
-
-Inside the DOMContentLoaded block, add this event listener:
-
-```javascript
-anchor.addEventListener("mouseenter", () => {
-  const rect = anchor.getBoundingClientRect();
-  anchorTooltip.style.opacity = "1";
-  anchorTooltip.style.left = `${rect.left + 60}px`;
-  anchorTooltip.style.top = `${rect.top - 30}px`;
-
-  if (audio.paused) {
-    anchorTooltip.innerText = "Klik for at starte musikken";
-  } else {
-    anchorTooltip.innerText = "Klik for at stoppe musikken";
-  }
-});
-```
-
-✅ Commit your changes:
-
-> 💡 We use getBoundingClientRect() to position the tooltip next to the anchor based on its location in the browser window.
-
-#### 🎯 Step 3.5 – Hide the tooltip on mouseleave
-
-Now add another event that hides the tooltip when the user moves the mouse away:
-
-```javascript
-anchor.addEventListener("mouseleave", () => {
-  anchorTooltip.style.opacity = "0";
-});
-```
-
-✅ Commit your changes:
-
-#### 🔊 Step 3.6 – Toggle audio on click
-
-Finally, make the anchor control audio playback:
-
-```javascript
-anchor.addEventListener("click", () => {
-  audio.muted = false;
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-});
-```
-
-✅ Commit your changes:
-
----
-
-## 🐟 Module 4 – Click on a Fish to See Tooltip
-
-### 🎯 Learning Goals
-
-- Dynamically show a tooltip when clicking a fish
-- Use JavaScript to access element classes and event data
-- Work with structured data in an array (`fishInfo`)
-- Show contextual content based on user input
-
----
+m
 
 #### 🧱 Step 4.1 – Update the HTML document
 
